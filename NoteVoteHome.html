@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Note-Vote</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <div id="note-vote-container">
+    <header id="note-vote-header">
+      <span id="note-vote-user">Logged in as:</span>
+      <button id="note-vote-settings">settings</button>
+      <button id="note-vote-logout">Log Out</button>
+    </header>
+
+    <section id="note-vote-input">
+      <input type="text" id="note-vote-new-note" placeholder="Enter a new note here" />
+      <button id="note-vote-add">Add</button>
+    </section>
+
+    <section id="note-vote-list">
+      <form class="note-item upvoted">
+        <p>this is a note you upvoted</p>
+        <div class="note-vote-controls">
+          <button type="submit" class="vote-up">↑</button>
+          <button type="submit" class="vote-down">↓</button>
+          <span class="note-score">1</span>
+        </div>
+      </form>
+
+      <form class="note-item downvoted">
+        <p>this is a note you downvoted</p>
+        <div class="note-vote-controls">
+          <button type="submit" class="vote-up">↑</button>
+          <button type="submit" class="vote-down">↓</button>
+          <span class="note-score">-1</span>
+        </div>
+      </form>
+
+      <form class="note-item neutral">
+        <p>this is a note you haven't voted</p>
+        <div class="note-vote-controls">
+          <button type="submit" class="vote-up">↑</button>
+          <button type="submit" class="vote-down">↓</button>
+          <span class="note-score">0</span>
+        </div>
+      </form>
+
+      <form class="note-item submitted">
+        <p>this is a note you submitted</p>
+        <div class="note-vote-controls">
+          <span class="note-score">0</span>
+        </div>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
