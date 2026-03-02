@@ -1,12 +1,174 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  background-color: #f5f5f5;
 }
 
-h1 {
+/* ---------- Login/Register page ---------- */
+
+.nv-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nv-title {
   font-weight: 300;
+  margin-bottom: 20px;
 }
 
-.card {
-  border-radius: 8px;
+.nv-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  overflow: hidden;
+}
+
+/* hide radios */
+.nv-accordion-input {
+  display: none;
+}
+
+/* headers */
+
+.nv-accordion-header {
+  background-color: #e9ecef;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.nv-accordion-header-bottom {
+  border-top: 1px solid #d0d0d0;
+}
+
+/* arrow */
+
+.nv-accordion-arrow::before {
+  content: "▼";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* panels */
+
+.nv-accordion-panel {
+  padding: 16px 16px 20px 16px;
+  border-top: 1px solid #d0d0d0;
+  display: none;
+}
+
+/* section title */
+
+.nv-section-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* labels */
+
+.nv-form-label {
+  font-weight: 400;
+}
+
+/* radio logic: show panel + rotate arrow */
+
+#nv-login-tab:checked ~ .nv-accordion-header:nth-of-type(1) .nv-accordion-arrow::before {
+  transform: rotate(180deg);
+}
+
+#nv-login-tab:checked ~ .nv-accordion-panel:nth-of-type(1) {
+  display: block;
+}
+
+#nv-register-tab:checked ~ .nv-accordion-header:nth-of-type(2) .nv-accordion-arrow::before {
+  transform: rotate(180deg);
+}
+
+#nv-register-tab:checked ~ .nv-accordion-panel:nth-of-type(2) {
+  display: block;
+}
+
+/* ---------- loginHistory/notes page ---------- */
+
+.nv-history-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.nv-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.nv-history-actions > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+.nv-notes-list {
+  margin-bottom: 16px;
+}
+
+.nv-note-row {
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.nv-note-votes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nv-arrow {
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+.nv-arrow-up {
+  margin-right: 2px;
+}
+
+.nv-arrow-active {
+  color: #28a745; /* green */
+}
+
+.nv-arrow-active-down {
+  color: #dc3545; /* red */
+}
+
+.nv-score {
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+/* add note row */
+
+.nv-add-note-row {
+  display: flex;
+  gap: 8px;
+}
+
+.nv-add-input {
+  flex: 1;
+}
+
+.nv-add-button {
+  white-space: nowrap;
 }

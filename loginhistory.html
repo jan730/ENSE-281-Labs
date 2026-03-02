@@ -2,80 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Note‑Vote Home</title>
+  <title>Note-Vote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container">
-      <span class="navbar-brand">Note‑Vote</span>
+  <div class="nv-history-wrapper">
 
-      <div class="ms-auto">
-        <span class="me-3 text-muted">Logged in as: example@email.com</span>
-        <a class="btn btn-outline-secondary me-2" href="#">Settings</a>
-        <a class="btn btn-outline-secondary" href="login.html">Logout</a>
+    <div class="nv-history-header">
+      <span>Logged in as: example@email.com</span>
+      <div class="nv-history-actions">
+        <button class="btn btn-outline-secondary btn-sm">Settings</button>
+        <a href="login.html" class="btn btn-outline-secondary btn-sm">Log Out</a>
       </div>
     </div>
-  </nav>
 
-  <div class="container mt-4">
+    <div class="nv-notes-list">
 
-    <div class="card p-4 shadow-sm">
-
-      <!-- Add Note -->
-      <div class="input-group mb-4">
-        <input type="text" id="note-vote-new-note" class="form-control" placeholder="Enter a new note here" />
-        <button id="note-vote-add" class="btn btn-primary">Add</button>
+      <div class="nv-note-row">
+        <span>this is a note you upvoted</span>
+        <div class="nv-note-votes">
+          <span class="nv-arrow nv-arrow-up nv-arrow-active">▲</span>
+          <span class="nv-arrow nv-arrow-down">▼</span>
+          <span class="nv-score">1</span>
+        </div>
       </div>
 
-      <!-- Notes List -->
-      <div class="list-group">
-
-        <div class="list-group-item d-flex justify-content-between align-items-center">
-          <span>this is a note you upvoted</span>
-          <div>
-            <button class="btn btn-outline-secondary btn-sm">↑</button>
-            <button class="btn btn-outline-secondary btn-sm">↓</button>
-            <span class="ms-2 fw-bold">1</span>
-          </div>
+      <div class="nv-note-row">
+        <span>this is a note you downvoted</span>
+        <div class="nv-note-votes">
+          <span class="nv-arrow nv-arrow-up">▲</span>
+          <span class="nv-arrow nv-arrow-down nv-arrow-active-down">▼</span>
+          <span class="nv-score">-1</span>
         </div>
+      </div>
 
-        <div class="list-group-item d-flex justify-content-between align-items-center">
-          <span>this is a note you downvoted</span>
-          <div>
-            <button class="btn btn-outline-secondary btn-sm">↑</button>
-            <button class="btn btn-outline-secondary btn-sm">↓</button>
-            <span class="ms-2 fw-bold">-1</span>
-          </div>
+      <div class="nv-note-row">
+        <span>this is a note you haven't voted on yet</span>
+        <div class="nv-note-votes">
+          <span class="nv-arrow nv-arrow-up">▲</span>
+          <span class="nv-arrow nv-arrow-down">▼</span>
+          <span class="nv-score">0</span>
         </div>
+      </div>
 
-        <div class="list-group-item d-flex justify-content-between align-items-center">
-          <span>this is a note you haven't voted</span>
-          <div>
-            <button class="btn btn-outline-secondary btn-sm">↑</button>
-            <button class="btn btn-outline-secondary btn-sm">↓</button>
-            <span class="ms-2 fw-bold">0</span>
-          </div>
+      <div class="nv-note-row">
+        <span>this is a note you submitted</span>
+        <div class="nv-note-votes">
+          <span class="nv-score">0</span>
         </div>
-
-        <div class="list-group-item d-flex justify-content-between align-items-center">
-          <span>this is a note you submitted</span>
-          <span class="fw-bold">0</span>
-        </div>
-
       </div>
 
     </div>
+
+    <div class="nv-add-note-row">
+      <input type="text" class="form-control nv-add-input" placeholder="Enter a new note here" />
+      <button class="btn btn-primary nv-add-button">Add</button>
+    </div>
+
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
