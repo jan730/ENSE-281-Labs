@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Note-Vote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+  <div class="nv-page-wrapper">
+    <h1 class="nv-title">Note-Vote</h1>
+
+    <div class="nv-card">
+
+      <!-- Hidden radios -->
+      <input type="radio" name="nv-accordion" id="nv-login-tab" class="nv-accordion-input" checked>
+      <input type="radio" name="nv-accordion" id="nv-register-tab" class="nv-accordion-input">
+
+      <!-- LOGIN HEADER -->
+      <label for="nv-login-tab" class="nv-accordion-header nv-login-header">
+        <span>Log In</span>
+        <span class="nv-accordion-arrow"></span>
+      </label>
+
+      <!-- LOGIN PANEL -->
+      <div class="nv-accordion-panel nv-login-panel">
+        <h2 class="nv-section-title">Log in</h2>
+
+        <form action="/login" method="post">
+          <div class="mb-3">
+            <label for="login-email" class="form-label">Email address</label>
+            <input type="email" id="login-email" name="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="login-password" class="form-label">Password</label>
+            <input type="password" id="login-password" name="password" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Log in</button>
+        </form>
+      </div>
+
+      <!-- REGISTER HEADER -->
+      <label for="nv-register-tab" class="nv-accordion-header nv-register-header">
+        <span>Register</span>
+        <span class="nv-accordion-arrow"></span>
+      </label>
+
+      <!-- REGISTER PANEL -->
+      <div class="nv-accordion-panel nv-register-panel">
+        <h2 class="nv-section-title">Sign up</h2>
+
+        <form action="/register" method="post">
+          <div class="mb-3">
+            <label for="signup-email" class="form-label">Email address</label>
+            <input type="email" id="signup-email" name="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="signup-password" class="form-label">Password</label>
+            <input type="password" id="signup-password" name="password" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="invite-code" class="form-label">Invite Code</label>
+            <input type="text" id="invite-code" name="invite-code" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

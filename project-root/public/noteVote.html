@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Vote</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+
+    <h1 class="mb-3">Note-Vote</h1>
+
+    <!-- Logged-in label -->
+    <p id="currentUserLabel" class="fw-bold mb-2">Logged in as User A</p>
+
+    <!-- Bootstrap Dropdown -->
+    <div class="dropdown mb-4">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Switch User
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item user-option" id="userA" data-user="User A">User A</a></li>
+            <li><a class="dropdown-item user-option" id="userB" data-user="User B">User B</a></li>
+            <li><a class="dropdown-item user-option" id="userC" data-user="User C">User C</a></li>
+        </ul>
+    </div>
+
+    <!-- Notes container -->
+    <div id="notesContainer" class="mb-4"></div>
+
+    <!-- Add note row -->
+    <div class="d-flex gap-2">
+        <input id="newNoteText" type="text" class="form-control" placeholder="Write a note…">
+        <button id="addNoteBtn" class="btn btn-primary">Add</button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <!-- Your MVC script -->
+    <script src="script.js"></script>
+
+</body>
+</html>

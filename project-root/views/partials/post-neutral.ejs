@@ -1,0 +1,23 @@
+<div class="nv-note-row">
+  <span><%= post.text %></span>
+
+  <div class="nv-note-votes">
+    <form action="/upvote" method="post" class="m-0">
+      <input type="hidden" name="username" value="<%= username %>">
+      <input type="hidden" name="postId" value="<%= post._id %>">
+      <button type="submit" class="btn btn-link p-0 text-decoration-none">
+        <span class="nv-arrow">▲</span>
+      </button>
+    </form>
+
+    <form action="/downvote" method="post" class="m-0">
+      <input type="hidden" name="username" value="<%= username %>">
+      <input type="hidden" name="postId" value="<%= post._id %>">
+      <button type="submit" class="btn btn-link p-0 text-decoration-none">
+        <span class="nv-arrow">▼</span>
+      </button>
+    </form>
+
+    <span class="nv-score"><%= score %></span>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+[
+  {
+    "_id": 1,
+    "text": "User A post (no votes)",
+    "creator": "a@a.a",
+    "upvotes": [],
+    "downvotes": []
+  },
+  {
+    "_id": 2,
+    "text": "User A post (upvoted by User B)",
+    "creator": "a@a.a",
+    "upvotes": [
+      "b@b.b"
+    ],
+    "downvotes": []
+  },
+  {
+    "_id": 3,
+    "text": "User A post (downvoted by User B)",
+    "creator": "a@a.a",
+    "upvotes": [],
+    "downvotes": [
+      "b@b.b"
+    ]
+  },
+  {
+    "_id": 4,
+    "text": "User B post (no votes)",
+    "creator": "b@b.b",
+    "upvotes": [],
+    "downvotes": []
+  },
+  {
+    "_id": 5,
+    "text": "User B post (upvoted by User A)",
+    "creator": "b@b.b",
+    "upvotes": [],
+    "downvotes": []
+  },
+  {
+    "_id": 6,
+    "text": "User B post (downvoted by User A)",
+    "creator": "b@b.b",
+    "upvotes": [],
+    "downvotes": []
+  }
+]
