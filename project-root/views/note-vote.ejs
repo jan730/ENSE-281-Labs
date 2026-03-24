@@ -25,11 +25,18 @@
   </div>
 
   <!-- Add Post -->
-  <form action="/addpost" method="post" class="nv-add-note-row">
-    <input type="hidden" name="username" value="<%= username %>">
-    <input type="text" class="form-control nv-add-input" name="text" placeholder="Enter a new note here" required />
-    <button class="btn btn-primary nv-add-button" type="submit">Add</button>
-  </form>
+<form action="/addpost" method="post" class="nv-add-note-row">
+  <input
+    type="text"
+    class="form-control nv-add-input"
+    name="text"
+    placeholder="Enter a new note here"
+    required
+  />
+  <button class="btn btn-primary nv-add-button" type="submit">
+    Add
+  </button>
+</form>
 </div>
 
 <%- include("layouts/footer") -%>
